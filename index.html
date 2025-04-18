@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta http-equiv="content-type"="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doppelcheck - Critical Information Analysis Tool</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer="defer"></script>
+</head>
+<body>
+    <header>
+        <div class="nav-content">
+            <nav class="nav-menu">
+                <div class="logo">
+                    <a href="#hero">
+                        <img src="assets/images/DC_Logo__midnight_sideways_1.svg" alt="doppelcheck logo">
+                    </a>
+                </div>
+                <a href="#about">ÜBER DOPPELCHECK</a>
+                <a href="#features">FUNKTIONEN</a>
+                <a href="#installation">INSTALLATION</a>
+                <a href="#usage">ANWENDUNG</a>
+                <a href="#info">INFO</a>
+                <a href="#language" class="language-switch">DE\EN</a>
+                <a href="https://github.com/Doppelcheck" target="_blank">GITHUB</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="scroll-container">
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Kritisch denken –<br>informiert handeln.</h1>
+                    <p>Doppelcheck unterstützt beim kritischen Umgang mit Online-Informationen und stärkt digitale Mündigkeit. Lokal, sicher und individuell anpassbar.</p>
+                    <button class="cta-button" onclick="location.href='#about';">
+                        MEHR ERFAHREN
+                        <svg viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="button-arrow">
+                            <path d="M1.93329 1.5L13.5697 14.5L25.9333 1.5" stroke="#F59A00" stroke-width="3" stroke-linecap="round"></path>
+                            <path d="M1.93329 11.5L13.5697 24.5L25.9333 11.5" stroke="#F59A00" stroke-width="3" stroke-linecap="round"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="function-section">
+            <div class="function-demo">
+                <h2 class="section-title">Über Doppelcheck</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Was ist Doppelcheck?</h3>
+                        <p>Doppelcheck ist ein leistungsstarkes Werkzeug zur Analyse von Web-Inhalten, das entwickelt wurde, um Nutzern bei der kritischen Bewertung von Online-Informationen zu helfen. Es funktioniert als lokaler Server auf Ihrem Computer, der es Ihnen ermöglicht, mit einem Bookmarklet im Browser Inhalte zu analysieren und zu verifizieren.</p>
+                        
+                        <h3>Wie funktioniert es?</h3>
+                        <p>Doppelcheck besteht aus zwei Hauptkomponenten:</p>
+                        <ol>
+                            <li><strong>Lokaler Server:</strong> Läuft auf Ihrem Computer und verarbeitet alle Analysen lokal für maximale Privatsphäre</li>
+                            <li><strong>Browser-Bookmarklet:</strong> Eine spezielle Art von Lesezeichen, das JavaScript ausführt, um die aktuell geöffnete Webseite mit dem lokalen Server zu analysieren</li>
+                        </ol>
+                        
+                        <p>Nach der Installation können Sie mit einem Klick auf das Bookmarklet eine Seitenleiste öffnen, die Ihnen hilft, Informationen zu analysieren, Belege zu finden und die Glaubwürdigkeit von Online-Inhalten zu prüfen.</p>
+                    </div>
+                    <div class="about-video">
+                        <video controls id="user-video">
+                            <source src="assets/videos/250123_DC_Erklaervideo.mp4" type="video/mp4" alt="Demonstration des Doppelcheck-Tools">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="features-content">
+                <h2 class="section-title">Funktionen</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">📋</div>
+                        <h3>Inhaltsextraktion</h3>
+                        <p>Identifiziert und fasst automatisch Kernaussagen aus Web-Inhalten zusammen</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Evidenzsuche</h3>
+                        <p>Sucht nach unterstützenden Belegen aus externen Quellen</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚖️</div>
+                        <h3>Abgleichsanalyse</h3>
+                        <p>Vergleicht originale Inhalte mit externen Quellen, um Genauigkeit zu überprüfen</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🖌️</div>
+                        <h3>Visuelle Hervorhebung</h3>
+                        <p>Hebt relevanten Text auf der Originalseite hervor</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚙️</div>
+                        <h3>Anpassbare Quellen</h3>
+                        <p>Fügen Sie spezifische Domains als vertrauenswürdige Suchquellen hinzu</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Lokale Verarbeitung</h3>
+                        <p>Läuft lokal auf Ihrem Computer für maximale Privatsphäre</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Installation Section -->
+        <section id="installation" class="installation-section">
+            <div class="installation-content">
+                <h2 class="section-title installation-title">INSTALLATION</h2>
+                <div class="installation-steps-container">
+                    <h3 class="installation-subtitle">Schritt 1: Lokalen Server installieren</h3>
+                    <div class="installation-server">
+                        <div class="installation-server-options">
+                            <div class="install-option">
+                                <h4>Option A: Mit Docker (empfohlen)</h4>
+                                <ol>
+                                    <li>Installieren Sie <a href="https://docs.docker.com/get-docker/" target="_blank">Docker</a> & <a href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a></li>
+                                    <li>Laden Sie Doppelcheck von <a href="https://github.com/Doppelcheck" target="_blank">GitHub</a> herunter</li>
+                                    <li>Führen Sie im Terminal aus:
+                                        <pre><code>docker compose up</code></pre>
+                                    </li>
+                                    <li>Der Server läuft unter <code>http://localhost:5000</code></li>
+                                </ol>
+                            </div>
+                            <div class="install-option">
+                                <h4>Option B: Mit Python</h4>
+                                <ol>
+                                    <li>Installieren Sie <a href="https://www.python.org/downloads/" target="_blank">Python 3.10+</a></li>
+                                    <li>Laden Sie Doppelcheck von <a href="https://github.com/Doppelcheck" target="_blank">GitHub</a> herunter</li>
+                                    <li>Führen Sie im Terminal aus:
+                                        <pre><code>python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python main.py</code></pre>
+                                    </li>
+                                    <li>Der Server läuft unter <code>http://localhost:5000</code></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="installation-subtitle">Schritt 2: Bookmarklet installieren</h3>
+                    <div class="bookmarklet-installation">
+                        <p>Sobald der lokale Server läuft, öffnen Sie <code>http://localhost:5000</code> in Ihrem Browser und:</p>
+                        <ol>
+                            <li>
+                                Ziehen Sie den "doppelcheck⠆" Button in Ihre Lesezeichenleiste.
+                                <small>Ctrl+Shift+B (Windows/Linux) oder Command+Shift+B (Mac) zeigt die Lesezeichenleiste an.</small>
+                            </li>
+                            <li>Bestätigen Sie, wenn Ihr Browser nachfragt.</li>
+                        </ol>
+                        <div class="demo-video">
+                            <video controls id="installation-video">
+                                <source src="assets/videos/DC_Installationsvideo_1.mp4" type="video/mp4" alt="Installationsanleitung">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usage Section -->
+        <section id="usage" class="manual-section">
+            <div class="manual-content">
+                <h2 class="section-title">Anwendung</h2>
+                <div class="usage-intro">
+                    <p>Nachdem Sie den lokalen Server gestartet und das Bookmarklet installiert haben, können Sie Doppelcheck auf jeder Webseite verwenden:</p>
+                </div>
+                <div class="manual-steps">
+                    <div class="manual-step">
+                        <img src="assets/images/DC_Homepage_Installationsgrafik_1.png" alt="Schritt 1">
+                        <p>Rufen Sie eine Webseite mit Textinhalten auf</p>
+                    </div>
+                    <div class="manual-step">
+                        <img src="assets/images/DC_Homepage_Installationsgrafik_2.png" alt="Schritt 2">
+                        <p>Klicken Sie auf das Doppelcheck-Bookmarklet, um die Seitenleiste zu öffnen</p>
+                    </div>
+                    <div class="manual-step">
+                        <img src="assets/images/DC_Homepage_Installationsgrafik_3.png" alt="Schritt 3">
+                        <p>Klicken Sie auf eine Textauswahl, um den Doppelcheck zu aktivieren</p>
+                    </div>
+                    <div class="manual-step">
+                        <img src="assets/images/DC_Homepage_Installationsgrafik_4.png" alt="Schritt 4">
+                        <p>Die Keypoints erscheinen farbig markiert in der Seitenleiste</p>
+                    </div>
+                </div>
+
+                <div class="manual-step-detailed">
+                    <div class="interface-container">
+                        <img src="assets/images/DC_Homepage_Installationsgrafik_5_1.png" alt="Detailansicht der Doppelcheck-Oberfläche">
+                    </div>
+
+                    <div class="annotations-list">
+                        <div class="annotation-item">
+                            Ein Klick auf einen der Keypoints macht Folgendes sichtbar:
+                        </div>
+                        <div class="annotation-item">
+                            Extrahierte Kernaussage
+                        </div>
+                        <div class="annotation-item">
+                            Abgleich mit weiteren Quellen
+                        </div>
+                        <div class="annotation-item">
+                            Farbcode zeigt Grad an Übereinstimmung bzw. Widerspruch zwischen Text und Vergleichsquelle
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="troubleshooting">
+                    <h3>Häufige Fragen & Problemlösungen</h3>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <h4>Ist meine Daten privat bei der Nutzung von Doppelcheck?</h4>
+                            <p>Ja! Doppelcheck verarbeitet alles lokal auf Ihrem Computer. Der Inhalt der analysierten Seiten verlässt Ihr Gerät nicht, außer bei der Suche nach unterstützenden Belegen.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Das Bookmarklet funktioniert nicht</h4>
+                            <p>Stellen Sie sicher, dass der Doppelcheck-Server läuft. Überprüfen Sie, ob Ihr Browser JavaScript blockiert. Versuchen Sie, die Seite zu aktualisieren und es erneut zu versuchen.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Keine Inhalte erscheinen in der Seitenleiste</h4>
+                            <p>Die Seite enthält möglicherweise keine geeigneten Textinhalte für die Analyse. Versuchen Sie eine andere Webseite mit mehr Textinhalt oder prüfen Sie, ob die Website die Inhaltsextraktion blockiert.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Section -->
+            <footer id="info" class="footer">
+                <div class="footer-wrapper">
+                    <!-- Info Section -->
+                    <div class="footer-section">
+                        <h2>INFO</h2>
+                        <p>
+                            Doppelcheck ist ein Projekt des
+KI-Wissenschaftlers und -beraters Mark Wernsdorfer. Möglich gemacht
+wurde es durch Förderprogramme des WPK-Innovationsfonds sowie des Media
+Lab Bayern.
+                        </p>
+                    </div>
+
+                    <!-- Links Section -->
+                    <div class="footer-section">
+                        <h2>LINKS</h2>
+                        <ul>
+                            <li><a href="https://markwernsdorfer.com/" target="_blank">Mark Wernsdorfer</a></li>
+                            <li><a href="https://innovationsfonds.wpk.org/doppelcheck-ki-gestuetzte-lokale-faktenpruefung/" target="_blank">WPK Innovationsfonds</a></li>
+                            <li><a href="https://media-lab.de/de/angebote/media-tech-lab/doppelcheck/" target="_blank">Media Lab Bayern</a></li>
+                            <li><a href="https://github.com/Doppelcheck" target="_blank">Doppelcheck bei Github</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="footer-section">
+                        <h2>CONTACT</h2>
+                        <a href="mailto:info@doppelcheck.com" class="footer-email">info@doppelcheck.com</a>
+                    </div>
+
+                    <!-- Social Section -->
+                    <div class="footer-section">
+                        <h2>SOCIAL</h2>
+                        <div class="social-icons">
+                            <a href="#"><img src="assets/images/Icon_simple-x.svg" alt="X (Twitter)"></a>
+                            <a href="#"><img src="assets/images/Icon_akar-instagram-fill.svg" alt="Instagram"></a>
+                            <a href="#"><img src="assets/images/Icon_akar-linkedin-fill.svg" alt="LinkedIn"></a>
+                            <a href="#"><img src="assets/images/Icon_akar-facebook-fill.svg" alt="Facebook"></a>
+                            <a href="#"><img src="assets/images/Icon_akar-youtube-fill.svg" alt="YouTube"></a>
+                        </div>
+                    </div>
+
+                    <!-- Impressum Section -->
+                    <div class="footer-section impressum">
+                        <h2>IMPRESSUM</h2>
+                        <p>© 2025 Doppelcheck - Ein Projekt zur Förderung der digitalen Mündigkeit und kritischen Informationsbewertung. Alle Rechte vorbehalten. [check!!]</p>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </div>
+</body>
+</html>
