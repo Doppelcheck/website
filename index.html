@@ -5,36 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doppelcheck — Kritisch lesen, informiert handeln.</title>
     <meta name="description" content="Doppelcheck ist eine Browser-Erweiterung, die beim kritischen Lesen hilft: Sie extrahiert Behauptungen, sucht Belege und zeigt Widersprüche direkt im Artikel.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="assets/css/style.css?v=2">
+    <script src="assets/js/script.js?v=2" defer></script>
 </head>
 <body>
-    <div class="grain" aria-hidden="true"></div>
 
-    <header class="masthead-bar">
-        <div class="masthead-bar__inner">
+    <header class="topbar">
+        <div class="topbar__inner">
             <a href="#top" class="brand" aria-label="Doppelcheck">
-                <span class="brand__mark">doppelcheck</span><span class="brand__colon" aria-hidden="true">:</span>
+                <span class="brand__name">doppelcheck</span><span class="brand__cursor" aria-hidden="true">▍</span>
             </a>
-            <nav class="primary-nav" aria-label="Primary">
-                <a href="#about"        data-de="Über"          data-en="About">Über</a>
-                <a href="#features"     data-de="Funktionen"    data-en="Features">Funktionen</a>
-                <a href="#install"      data-de="Installation"  data-en="Install">Installation</a>
-                <a href="#faq"          data-de="FAQ"           data-en="FAQ">FAQ</a>
-                <a href="#developers"   data-de="Entwickler"    data-en="Developers">Entwickler</a>
+            <nav class="topnav" aria-label="Primary">
+                <a href="#about"        data-de="Über"         data-en="About">Über</a>
+                <a href="#how"          data-de="Wie"          data-en="How">Wie</a>
+                <a href="#features"     data-de="Funktionen"   data-en="Features">Funktionen</a>
+                <a href="#install"      data-de="Installation" data-en="Install">Installation</a>
+                <a href="#faq"          data-de="FAQ"          data-en="FAQ">FAQ</a>
+                <a href="#developers"   data-de="Entwickler"   data-en="Devs">Entwickler</a>
             </nav>
-            <div class="masthead-bar__right">
+            <div class="topbar__right">
                 <button class="lang-switch" type="button" aria-label="Toggle language">
-                    <span class="lang-switch__opt is-active" data-lang="de">DE</span>
-                    <span class="lang-switch__sep">/</span>
-                    <span class="lang-switch__opt" data-lang="en">EN</span>
+                    <span class="lang-switch__opt is-active" data-lang="de">de</span>
+                    <span class="lang-switch__sep">·</span>
+                    <span class="lang-switch__opt" data-lang="en">en</span>
                 </button>
-                <a class="gh-link" href="https://github.com/doppelcheck/main" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.13v3.16c0 .31.21.68.8.56C20.22 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
-                    GitHub
+                <button class="theme-switch" type="button" aria-label="Toggle theme">
+                    <span class="theme-switch__opt" data-theme-opt="light" aria-label="Light theme">☀</span>
+                    <span class="theme-switch__sep" aria-hidden="true">·</span>
+                    <span class="theme-switch__opt" data-theme-opt="dark"  aria-label="Dark theme">☾</span>
+                </button>
+                <a class="topbar__gh" href="https://github.com/doppelcheck/main" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.13v3.16c0 .31.21.68.8.56C20.22 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
                 </a>
             </div>
         </div>
@@ -43,25 +44,29 @@
     <main id="top">
 
         <!-- =========================================================
-             HERO — photo background + headline
+             HERO — annotated passage
         ========================================================== -->
         <section class="hero" aria-labelledby="hero-headline">
             <div class="hero__photo" aria-hidden="true"></div>
-            <div class="hero__overlay" aria-hidden="true"></div>
 
             <div class="hero__inner">
-                <div class="hero__meta">
-                    <span class="dateline-label" data-de="Ausgabe" data-en="Edition">Ausgabe</span>
-                    <span class="dateline-value">Nº 1.0</span>
-                    <span class="hero__meta-sep" aria-hidden="true">·</span>
-                    <span class="dateline-value" data-de="Frei · Open Source" data-en="Free · Open Source">Frei · Open Source</span>
-                </div>
+                <p class="hero__lockup">
+                    <span class="hero__lockup-line">doppelcheck</span>
+                    <span class="hero__lockup-tag" data-de="v1.0 — eine Browser-Erweiterung" data-en="v1.0 — a browser extension">v1.0 — eine Browser-Erweiterung</span>
+                </p>
 
-                <h1 id="hero-headline" class="hero__hed">
-                    <span class="hero__kicker" data-de="Eine Browser-Erweiterung." data-en="A browser extension.">Eine Browser-Erweiterung.</span>
-                    <span class="hero__line-1" data-de="Kritisch lesen," data-en="Read critically,">Kritisch lesen,</span>
-                    <span class="hero__line-2" data-de="informiert handeln." data-en="act informed.">informiert handeln.</span>
+                <h1 id="hero-headline" class="hero__headline">
+                    <span data-de="Kritisch lesen, " data-en="Read critically, ">Kritisch lesen, </span><span class="mark mark--claim"
+                          data-de="informiert handeln."
+                          data-en="act informed.">informiert handeln.</span><span class="mark__pin" aria-hidden="true">↳</span>
                 </h1>
+
+                <aside class="hero__pin-note">
+                    <span class="hero__pin-arrow" aria-hidden="true">─</span>
+                    <span class="hero__pin-text"
+                          data-de="Eine extrahierte Behauptung, wie Doppelcheck sie auf jeder Webseite markiert."
+                          data-en="An extracted claim — exactly how Doppelcheck marks them on any web page.">Eine extrahierte Behauptung, wie Doppelcheck sie auf jeder Webseite markiert.</span>
+                </aside>
 
                 <p class="hero__lede"
                    data-de="Doppelcheck liest mit, isoliert die tragenden Behauptungen eines Artikels und prüft sie gegen Faktenchecks und unabhängige Quellen — direkt am Text, auf Ihrem Gerät."
@@ -69,175 +74,198 @@
 
                 <div class="hero__cta">
                     <a href="#install" class="btn btn--primary">
-                        <span data-de="Erweiterung installieren" data-en="Install the extension">Erweiterung installieren</span>
-                        <span class="btn__arrow" aria-hidden="true">→</span>
+                        <span data-de="Installieren" data-en="Install">Installieren</span>
                     </a>
-                    <a href="#about" class="btn btn--ghost-light">
-                        <span data-de="Mehr erfahren" data-en="Learn more">Mehr erfahren</span>
+                    <a href="#how" class="btn btn--text">
+                        <span data-de="Wie es funktioniert →" data-en="How it works →">Wie es funktioniert →</span>
                     </a>
                 </div>
             </div>
-
-            <a href="#about" class="hero__scroll" aria-label="Scroll">
-                <svg viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M1.93329 1.5L13.5697 14.5L25.9333 1.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
-                    <path d="M1.93329 11.5L13.5697 24.5L25.9333 11.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
-                </svg>
-            </a>
         </section>
 
 
         <!-- =========================================================
-             ABOUT — split: text + explainer video
+             ABOUT
         ========================================================== -->
-        <section class="section section--about" id="about">
-            <header class="section-head">
-                <span class="section-head__num">01</span>
-                <h2 class="section-head__title" data-de="Über Doppelcheck" data-en="About Doppelcheck">Über Doppelcheck</h2>
-                <p class="section-head__deck" data-de="Was es ist und warum es existiert." data-en="What it is and why it exists.">Was es ist und warum es existiert.</p>
-            </header>
+        <section class="block block--about" id="about">
+            <div class="block__head">
+                <h2 class="block__title" data-de="Was Doppelcheck ist" data-en="What Doppelcheck is">Was Doppelcheck ist</h2>
+            </div>
 
-            <div class="about-body">
-                <div class="about-body__main">
-                    <p class="dropcap"
-                       data-de="Online-Texte wirken vertrauenswürdig, weil sie wie Texte aussehen. Welche Aussagen darin sind tatsächlich belegt, welche zitieren ältere Behauptungen, welche stehen gegen Faktenchecks oder unabhängige Quellen? Diese Fragen kostet jede einzelne Recherche Zeit, Konzentration und Routine."
+            <div class="about-grid">
+                <div class="about-grid__copy">
+                    <p data-de="Online-Texte wirken vertrauenswürdig, weil sie wie Texte aussehen. Welche Aussagen darin sind tatsächlich belegt, welche zitieren ältere Behauptungen, welche stehen gegen Faktenchecks oder unabhängige Quellen? Diese Fragen kostet jede einzelne Recherche Zeit, Konzentration und Routine."
                        data-en="Online texts look trustworthy because they look like texts. Which statements are actually supported, which echo older claims, which stand against fact-checks or independent sources? Asking those questions costs time, focus, and routine on every single read.">Online-Texte wirken vertrauenswürdig, weil sie wie Texte aussehen. Welche Aussagen darin sind tatsächlich belegt, welche zitieren ältere Behauptungen, welche stehen gegen Faktenchecks oder unabhängige Quellen? Diese Fragen kostet jede einzelne Recherche Zeit, Konzentration und Routine.</p>
 
-                    <p data-de="Doppelcheck nimmt diese Routine ab. Es ist eine Browser-Erweiterung, die parallel zum Lesen die tragenden Behauptungen eines Artikels herauszieht, sie gegen Faktencheck-Datenbanken und unabhängige Quellen spiegelt — und Übereinstimmungen wie Widersprüche direkt am Text sichtbar macht. Inhalte verlassen das Gerät standardmäßig nicht."
-                       data-en="Doppelcheck takes that routine off your shoulders. It is a browser extension that reads alongside you, pulls the load-bearing claims out of an article, mirrors them against fact-check databases and independent sources — and surfaces both agreement and contradiction in place, on the article. Page content stays on the device by default.">Doppelcheck nimmt diese Routine ab. Es ist eine Browser-Erweiterung, die parallel zum Lesen die tragenden Behauptungen eines Artikels herauszieht, sie gegen Faktencheck-Datenbanken und unabhängige Quellen spiegelt — und Übereinstimmungen wie Widersprüche direkt am Text sichtbar macht. Inhalte verlassen das Gerät standardmäßig nicht.</p>
-
-                    <blockquote class="pull-quote">
-                        <p data-de="„Kritisch lesen heißt nicht misstrauen — es heißt prüfen können."
-                           data-en="“To read critically is not to mistrust — it is to be able to check.”">„Kritisch lesen heißt nicht misstrauen — es heißt prüfen können."</p>
-                    </blockquote>
+                    <p data-de='Doppelcheck nimmt diese Routine ab. Es liest parallel mit, zieht die <span class="mark mark--claim">tragenden Behauptungen</span> heraus, spiegelt sie an Faktencheck-Datenbanken und unabhängigen Quellen und macht <span class="mark mark--agree">Übereinstimmung</span> wie <span class="mark mark--disagree">Widerspruch</span> direkt am Text sichtbar. Inhalte verlassen das Gerät standardmäßig nicht.'
+                       data-en='Doppelcheck takes that routine off your shoulders. It reads alongside you, pulls out the <span class="mark mark--claim">load-bearing claims</span>, mirrors them against fact-check databases and independent sources, and surfaces <span class="mark mark--agree">agreement</span> and <span class="mark mark--disagree">contradiction</span> directly on the article. Page content stays on the device by default.'>Doppelcheck nimmt diese Routine ab. Es liest parallel mit, zieht die <span class="mark mark--claim">tragenden Behauptungen</span> heraus, spiegelt sie an Faktencheck-Datenbanken und unabhängigen Quellen und macht <span class="mark mark--agree">Übereinstimmung</span> wie <span class="mark mark--disagree">Widerspruch</span> direkt am Text sichtbar. Inhalte verlassen das Gerät standardmäßig nicht.</p>
                 </div>
 
-                <aside class="about-body__media">
-                    <video class="about-body__video" controls preload="metadata" id="about-video"
-                           poster="assets/images/DC_image_2.jpg">
-                        <source src="assets/videos/250123_DC_Erklaervideo.mp4" type="video/mp4">
-                        <span data-de="Ihr Browser unterstützt das Video-Tag nicht." data-en="Your browser does not support the video tag.">Ihr Browser unterstützt das Video-Tag nicht.</span>
-                    </video>
-                    <figcaption class="about-body__caption"
-                                data-de="Das Erklärvideo (ca. 2 Min.)"
-                                data-en="The explainer video (~2 min)">Das Erklärvideo (ca. 2 Min.)</figcaption>
+                <aside class="about-grid__media">
+                    <div class="about-grid__video-wrap">
+                        <video class="about-grid__video" controls preload="metadata" id="about-video" poster="assets/images/DC_image_2.jpg">
+                            <source src="assets/videos/250123_DC_Erklaervideo.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <p class="about-grid__caption"
+                       data-de="Erklärvideo — ca. 2 Min."
+                       data-en="Explainer video — about 2 min.">Erklärvideo — ca. 2 Min.</p>
                 </aside>
             </div>
         </section>
 
 
         <!-- =========================================================
-             FEATURES — emoji-icon cards
+             HOW IT WORKS — annotated demo passage
         ========================================================== -->
-        <section class="section section--features" id="features">
-            <header class="section-head">
-                <span class="section-head__num">02</span>
-                <h2 class="section-head__title" data-de="Funktionen" data-en="Features">Funktionen</h2>
-                <p class="section-head__deck" data-de="Was die Erweiterung im Alltag tut." data-en="What the extension does in practice.">Was die Erweiterung im Alltag tut.</p>
-            </header>
-
-            <div class="features-grid">
-                <article class="feature">
-                    <div class="feature__icon" aria-hidden="true">📋</div>
-                    <h3 class="feature__title" data-de="Behauptungen extrahieren" data-en="Extract claims">Behauptungen extrahieren</h3>
-                    <p class="feature__body" data-de="Identifiziert automatisch die tragenden Faktenaussagen eines Artikels."
-                       data-en="Automatically identifies the load-bearing factual statements of an article.">Identifiziert automatisch die tragenden Faktenaussagen eines Artikels.</p>
-                </article>
-                <article class="feature">
-                    <div class="feature__icon" aria-hidden="true">🔍</div>
-                    <h3 class="feature__title" data-de="Belege finden" data-en="Find evidence">Belege finden</h3>
-                    <p class="feature__body" data-de="Sucht Faktenchecks und unabhängige Quellen zu jeder einzelnen Behauptung."
-                       data-en="Searches fact-checks and independent sources for each individual claim.">Sucht Faktenchecks und unabhängige Quellen zu jeder einzelnen Behauptung.</p>
-                </article>
-                <article class="feature">
-                    <div class="feature__icon" aria-hidden="true">⚖️</div>
-                    <h3 class="feature__title" data-de="Vergleichen" data-en="Compare">Vergleichen</h3>
-                    <p class="feature__body" data-de="Stellt Übereinstimmungen, Widersprüche und Lücken zwischen Artikel und Quellen dar."
-                       data-en="Surfaces agreement, disagreement, and gaps between article and sources.">Stellt Übereinstimmungen, Widersprüche und Lücken zwischen Artikel und Quellen dar.</p>
-                </article>
-                <article class="feature">
-                    <div class="feature__icon" aria-hidden="true">🖌️</div>
-                    <h3 class="feature__title" data-de="Direkt im Artikel" data-en="In the article itself">Direkt im Artikel</h3>
-                    <p class="feature__body" data-de="Hebt Behauptung und Belegstellen farbig direkt im Originaltext hervor."
-                       data-en="Highlights claim and evidence directly on the source article in colour.">Hebt Behauptung und Belegstellen farbig direkt im Originaltext hervor.</p>
-                </article>
-                <article class="feature">
-                    <div class="feature__icon" aria-hidden="true">⚙️</div>
-                    <h3 class="feature__title" data-de="Eigene Quellen" data-en="Your own sources">Eigene Quellen</h3>
-                    <p class="feature__body" data-de="Hinterlegen Sie Domains, denen Sie vertrauen — Doppelcheck sucht zuerst dort."
-                       data-en="Pin domains you trust — Doppelcheck searches them first.">Hinterlegen Sie Domains, denen Sie vertrauen — Doppelcheck sucht zuerst dort.</p>
-                </article>
-                <article class="feature">
-                    <div class="feature__icon" aria-hidden="true">🔒</div>
-                    <h3 class="feature__title" data-de="Privat by default" data-en="Private by default">Privat by default</h3>
-                    <p class="feature__body" data-de="Im Standardpfad bleibt der Inhalt auf dem Gerät. Kein Drittserver, keine Konten."
-                       data-en="In the default path, content stays on the device. No third-party server, no accounts.">Im Standardpfad bleibt der Inhalt auf dem Gerät. Kein Drittserver, keine Konten.</p>
-                </article>
+        <section class="block block--how" id="how">
+            <div class="block__head">
+                <h2 class="block__title" data-de="So liest Doppelcheck mit" data-en="How Doppelcheck reads along">So liest Doppelcheck mit</h2>
+                <p class="block__intro"
+                   data-de="Eine kleine Demonstration. Der folgende Absatz ist ein Beispielartikel — die Markierungen zeigen, was Doppelcheck im Browser daraus macht."
+                   data-en="A small demonstration. The paragraph below is a sample article — the marks show what Doppelcheck would surface in the browser.">Eine kleine Demonstration. Der folgende Absatz ist ein Beispielartikel — die Markierungen zeigen, was Doppelcheck im Browser daraus macht.</p>
             </div>
+
+            <article class="demo">
+                <header class="demo__head">
+                    <span class="demo__url">https://example.com/artikel/2026-05-05</span>
+                    <span class="demo__byline" data-de="Beispielartikel" data-en="Sample article">Beispielartikel</span>
+                </header>
+                <div class="demo__body">
+                    <p class="demo__lede"
+                       data-de='Eine neue Studie behauptet, <span class="mark mark--claim" data-claim="1">Kaffee senke das Risiko für Herz-Kreislauf-Erkrankungen um 30 %</span>. Der Bericht beruft sich auf eine Auswertung skandinavischer Kohorten, die <span class="mark mark--claim" data-claim="2">über zwei Jahrzehnte mehr als 200.000 Teilnehmer beobachtet</span> haben sollen. Befürworter sehen darin einen Beweis, <span class="mark mark--claim" data-claim="3">dass moderater Konsum gesundheitlich unbedenklich</span> sei.'
+                       data-en='A new study claims that <span class="mark mark--claim" data-claim="1">coffee lowers cardiovascular risk by 30%</span>. The report cites an analysis of Scandinavian cohorts that allegedly <span class="mark mark--claim" data-claim="2">tracked more than 200,000 participants over two decades</span>. Proponents read this as proof <span class="mark mark--claim" data-claim="3">that moderate consumption is health-neutral</span>.'>Eine neue Studie behauptet, <span class="mark mark--claim" data-claim="1">Kaffee senke das Risiko für Herz-Kreislauf-Erkrankungen um 30 %</span>. Der Bericht beruft sich auf eine Auswertung skandinavischer Kohorten, die <span class="mark mark--claim" data-claim="2">über zwei Jahrzehnte mehr als 200.000 Teilnehmer beobachtet</span> haben sollen. Befürworter sehen darin einen Beweis, <span class="mark mark--claim" data-claim="3">dass moderater Konsum gesundheitlich unbedenklich</span> sei.</p>
+                </div>
+                <div class="demo__sidebar" aria-label="Doppelcheck side panel">
+                    <header class="demo__sidebar-head">
+                        <span class="demo__sidebar-icon" aria-hidden="true">◆</span>
+                        <span data-de="Doppelcheck" data-en="Doppelcheck">Doppelcheck</span>
+                    </header>
+                    <ul class="demo__claims">
+                        <li class="demo__claim" data-claim="1">
+                            <span class="demo__claim-num">1</span>
+                            <span class="demo__claim-text" data-de="Kaffee senke das Risiko um 30 %" data-en="Coffee lowers risk by 30 %">Kaffee senke das Risiko um 30 %</span>
+                            <span class="demo__claim-verdict demo__claim-verdict--agree" data-de="2 Quellen stimmen zu" data-en="2 sources agree">2 Quellen stimmen zu</span>
+                        </li>
+                        <li class="demo__claim" data-claim="2">
+                            <span class="demo__claim-num">2</span>
+                            <span class="demo__claim-text" data-de="200.000 Teilnehmer · 20 Jahre" data-en="200,000 participants · 20 years">200.000 Teilnehmer · 20 Jahre</span>
+                            <span class="demo__claim-verdict demo__claim-verdict--mixed" data-de="Quelle: 175.000" data-en="Source says 175,000">Quelle: 175.000</span>
+                        </li>
+                        <li class="demo__claim" data-claim="3">
+                            <span class="demo__claim-num">3</span>
+                            <span class="demo__claim-text" data-de="Moderat = unbedenklich" data-en="Moderate = harmless">Moderat = unbedenklich</span>
+                            <span class="demo__claim-verdict demo__claim-verdict--disagree" data-de="3 Quellen widersprechen" data-en="3 sources disagree">3 Quellen widersprechen</span>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <p class="demo-note"
+               data-de="Klick auf eine Markierung im Browser öffnet die jeweilige Quelle. Hier nur zur Veranschaulichung."
+               data-en="In the browser, clicking a mark opens its source. Here for illustration only.">Klick auf eine Markierung im Browser öffnet die jeweilige Quelle. Hier nur zur Veranschaulichung.</p>
         </section>
 
 
         <!-- =========================================================
-             INSTALL — slimmed: three plain steps
+             FEATURES — flat list
         ========================================================== -->
-        <section class="section section--install" id="install">
-            <header class="section-head">
-                <span class="section-head__num">03</span>
-                <h2 class="section-head__title" data-de="Installation" data-en="Install">Installation</h2>
-                <p class="section-head__deck" data-de="In drei Schritten einsatzbereit." data-en="Up and running in three steps.">In drei Schritten einsatzbereit.</p>
-            </header>
+        <section class="block block--features" id="features">
+            <div class="block__head">
+                <h2 class="block__title" data-de="Was es tut" data-en="What it does">Was es tut</h2>
+            </div>
+
+            <ul class="features">
+                <li class="feature">
+                    <span class="feature__sym" aria-hidden="true">📋</span>
+                    <h3 class="feature__title" data-de="Behauptungen extrahieren" data-en="Extract claims">Behauptungen extrahieren</h3>
+                    <p class="feature__body" data-de="Identifiziert die tragenden Faktenaussagen eines Artikels — in der Sprache des Originals."
+                       data-en="Identifies the load-bearing factual statements — in the article's own language.">Identifiziert die tragenden Faktenaussagen eines Artikels — in der Sprache des Originals.</p>
+                </li>
+                <li class="feature">
+                    <span class="feature__sym" aria-hidden="true">🔍</span>
+                    <h3 class="feature__title" data-de="Belege finden" data-en="Find evidence">Belege finden</h3>
+                    <p class="feature__body" data-de="Sucht zunächst in Faktencheck-Datenbanken, danach im offenen Web nach unabhängigen Quellen."
+                       data-en="Checks fact-check databases first, then independent sources on the open web.">Sucht zunächst in Faktencheck-Datenbanken, danach im offenen Web nach unabhängigen Quellen.</p>
+                </li>
+                <li class="feature">
+                    <span class="feature__sym" aria-hidden="true">⚖️</span>
+                    <h3 class="feature__title" data-de="Vergleichen" data-en="Compare">Vergleichen</h3>
+                    <p class="feature__body" data-de="Stellt Übereinstimmungen, Widersprüche und Lücken zwischen Artikel und Quellen dar."
+                       data-en="Surfaces agreement, disagreement, and gaps between article and sources.">Stellt Übereinstimmungen, Widersprüche und Lücken zwischen Artikel und Quellen dar.</p>
+                </li>
+                <li class="feature">
+                    <span class="feature__sym" aria-hidden="true">🖌️</span>
+                    <h3 class="feature__title" data-de="Direkt im Artikel" data-en="In the article itself">Direkt im Artikel</h3>
+                    <p class="feature__body" data-de="Markiert Behauptung und Belegstellen am Originaltext — ohne das DOM zu verändern."
+                       data-en="Marks claim and evidence on the source article — without mutating the DOM.">Markiert Behauptung und Belegstellen am Originaltext — ohne das DOM zu verändern.</p>
+                </li>
+                <li class="feature">
+                    <span class="feature__sym" aria-hidden="true">⚙️</span>
+                    <h3 class="feature__title" data-de="Eigene Quellen" data-en="Your own sources">Eigene Quellen</h3>
+                    <p class="feature__body" data-de="Hinterlegen Sie Domains, denen Sie vertrauen — Doppelcheck sucht zuerst dort."
+                       data-en="Pin domains you trust — Doppelcheck searches them first.">Hinterlegen Sie Domains, denen Sie vertrauen — Doppelcheck sucht zuerst dort.</p>
+                </li>
+                <li class="feature">
+                    <span class="feature__sym" aria-hidden="true">🔒</span>
+                    <h3 class="feature__title" data-de="Privat by default" data-en="Private by default">Privat by default</h3>
+                    <p class="feature__body" data-de="Im Standardpfad bleibt der Inhalt auf dem Gerät. Kein Drittserver, keine Konten."
+                       data-en="In the default path, content stays on the device. No third-party server, no accounts.">Im Standardpfad bleibt der Inhalt auf dem Gerät. Kein Drittserver, keine Konten.</p>
+                </li>
+            </ul>
+        </section>
+
+
+        <!-- =========================================================
+             INSTALL — three plain steps
+        ========================================================== -->
+        <section class="block block--install" id="install">
+            <div class="block__head">
+                <h2 class="block__title" data-de="Installieren" data-en="Install">Installieren</h2>
+                <p class="block__intro"
+                   data-de="Drei kurze Schritte. Detailanleitungen sind je Schritt verlinkt."
+                   data-en="Three short steps. Detailed guides linked per step.">Drei kurze Schritte. Detailanleitungen sind je Schritt verlinkt.</p>
+            </div>
 
             <ol class="steps">
                 <li class="step">
-                    <div class="step__num">1</div>
+                    <span class="step__no">1.</span>
                     <h3 class="step__title" data-de="Erweiterung laden" data-en="Get the extension">Erweiterung laden</h3>
                     <p class="step__body"
-                       data-de="Bauen Sie die Erweiterung aus dem Quelltext und laden Sie sie als entpacktes Add-on. Unterstützt: Chrome, Edge, Brave, Arc, Opera, Firefox 128+."
-                       data-en="Build the extension from source and load it as an unpacked add-on. Supported: Chrome, Edge, Brave, Arc, Opera, Firefox 128+.">Bauen Sie die Erweiterung aus dem Quelltext und laden Sie sie als entpacktes Add-on. Unterstützt: Chrome, Edge, Brave, Arc, Opera, Firefox 128+.</p>
-                    <a class="step__link" href="https://github.com/doppelcheck/main#install" target="_blank" rel="noopener">
-                        <span data-de="Anleitung auf GitHub" data-en="Instructions on GitHub">Anleitung auf GitHub</span>
-                        <span aria-hidden="true">↗</span>
-                    </a>
+                       data-de="Aus dem Quelltext bauen und als entpacktes Add-on im Browser laden. Unterstützt: Chrome, Edge, Brave, Arc, Opera, Firefox 128+."
+                       data-en="Build from source and load as an unpacked add-on. Supported: Chrome, Edge, Brave, Arc, Opera, Firefox 128+.">Aus dem Quelltext bauen und als entpacktes Add-on im Browser laden. Unterstützt: Chrome, Edge, Brave, Arc, Opera, Firefox 128+.</p>
+                    <a class="step__link" href="https://github.com/doppelcheck/main#install" target="_blank" rel="noopener"
+                       data-de="Anleitung →" data-en="Guide →">Anleitung →</a>
                 </li>
                 <li class="step">
-                    <div class="step__num">2</div>
+                    <span class="step__no">2.</span>
                     <h3 class="step__title" data-de="API-Schlüssel eintragen" data-en="Enter your API key">API-Schlüssel eintragen</h3>
                     <p class="step__body"
-                       data-de="Ein kostenloser Brave-Search-API-Schlüssel reicht für den persönlichen Gebrauch. Optional: ein Google-Fact-Check-Schlüssel für bestehende Faktenchecks."
-                       data-en="A free Brave Search API key is enough for personal use. Optional: a Google Fact Check key for existing fact-checks.">Ein kostenloser Brave-Search-API-Schlüssel reicht für den persönlichen Gebrauch. Optional: ein Google-Fact-Check-Schlüssel für bestehende Faktenchecks.</p>
-                    <a class="step__link" href="https://api-dashboard.search.brave.com/app/keys" target="_blank" rel="noopener">
-                        <span data-de="Brave-Schlüssel anfordern" data-en="Get a Brave key">Brave-Schlüssel anfordern</span>
-                        <span aria-hidden="true">↗</span>
-                    </a>
+                       data-de="Ein kostenloser Brave-Search-API-Schlüssel reicht für den persönlichen Gebrauch. Optional: ein Google-Fact-Check-Schlüssel."
+                       data-en="A free Brave Search API key is enough for personal use. Optional: a Google Fact Check key.">Ein kostenloser Brave-Search-API-Schlüssel reicht für den persönlichen Gebrauch. Optional: ein Google-Fact-Check-Schlüssel.</p>
+                    <a class="step__link" href="https://api-dashboard.search.brave.com/app/keys" target="_blank" rel="noopener"
+                       data-de="Schlüssel anfordern →" data-en="Get a key →">Schlüssel anfordern →</a>
                 </li>
                 <li class="step">
-                    <div class="step__num">3</div>
+                    <span class="step__no">3.</span>
                     <h3 class="step__title" data-de="Sprachmodell wählen" data-en="Pick a language model">Sprachmodell wählen</h3>
                     <p class="step__body"
-                       data-de="Standard ist Chromes integriertes Modell — kostenlos und auf dem Gerät. Alternativ: ein Cloud-Anbieter Ihrer Wahl oder ein lokaler Server."
-                       data-en="The default is Chrome's built-in model — free and on-device. Alternatives: a cloud provider of your choice or a local server.">Standard ist Chromes integriertes Modell — kostenlos und auf dem Gerät. Alternativ: ein Cloud-Anbieter Ihrer Wahl oder ein lokaler Server.</p>
-                    <a class="step__link" href="#developers">
-                        <span data-de="Optionen ansehen" data-en="See options">Optionen ansehen</span>
-                        <span aria-hidden="true">↓</span>
-                    </a>
+                       data-de="Standard ist Chromes integriertes Modell — kostenlos und auf dem Gerät. Alternativ: ein Cloud-Anbieter oder ein lokaler Server."
+                       data-en="The default is Chrome's built-in model — free and on-device. Alternatives: a cloud provider or a local server.">Standard ist Chromes integriertes Modell — kostenlos und auf dem Gerät. Alternativ: ein Cloud-Anbieter oder ein lokaler Server.</p>
+                    <a class="step__link" href="#developers"
+                       data-de="Optionen ↓" data-en="Options ↓">Optionen ↓</a>
                 </li>
             </ol>
-
-            <p class="install-note"
-               data-de="Alle Einstellungen leben auf dem Gerät und synchronisieren über den Browser. Vollständige technische Einrichtung im "
-               data-en="All settings live on the device and sync through the browser. Full technical setup in the ">Alle Einstellungen leben auf dem Gerät und synchronisieren über den Browser. Vollständige technische Einrichtung im <a href="#developers" data-de="Entwickler-Bereich" data-en="developer section">Entwickler-Bereich</a><span data-de="." data-en=".">.</span></p>
         </section>
 
 
         <!-- =========================================================
              FAQ
         ========================================================== -->
-        <section class="section section--faq" id="faq">
-            <header class="section-head">
-                <span class="section-head__num">04</span>
-                <h2 class="section-head__title" data-de="Häufige Fragen" data-en="Frequent questions">Häufige Fragen</h2>
-                <p class="section-head__deck" data-de="Was Nutzer regelmäßig fragen." data-en="What users regularly ask.">Was Nutzer regelmäßig fragen.</p>
-            </header>
+        <section class="block block--faq" id="faq">
+            <div class="block__head">
+                <h2 class="block__title" data-de="Fragen & Antworten" data-en="Questions & answers">Fragen &amp; Antworten</h2>
+            </div>
 
             <ul class="faq-list">
                 <li class="faq">
@@ -293,100 +321,86 @@
 
 
         <!-- =========================================================
-             FOR DEVELOPERS — technical detail tucked away here
+             FOR DEVELOPERS
         ========================================================== -->
-        <section class="dev-section" id="developers">
-            <div class="dev-section__inner">
-                <header class="dev-section__head">
-                    <span class="dev-section__tag" data-de="Für Entwickler" data-en="For developers">Für Entwickler</span>
-                    <h2 class="dev-section__title" data-de="Technische Einrichtung" data-en="Technical setup">Technische Einrichtung</h2>
-                    <p class="dev-section__deck"
-                       data-de="Aus dem Quelltext bauen, Modell-Stufen wählen, lokal hosten. Vollständige Dokumentation in den Repositorien."
-                       data-en="Build from source, pick a model tier, host locally. Full documentation in the repositories.">Aus dem Quelltext bauen, Modell-Stufen wählen, lokal hosten. Vollständige Dokumentation in den Repositorien.</p>
-                </header>
+        <section class="block block--devs" id="developers">
+            <div class="block__head">
+                <p class="block__eyebrow" data-de="Für Entwickler" data-en="For developers">Für Entwickler</p>
+                <h2 class="block__title" data-de="Technische Einrichtung" data-en="Technical setup">Technische Einrichtung</h2>
+                <p class="block__intro"
+                   data-de="Quelltext, Modell-Stufen, lokal hosten. Vollständige Dokumentation in den Repositorien."
+                   data-en="Source, model tiers, local hosting. Full documentation in the repositories.">Quelltext, Modell-Stufen, lokal hosten. Vollständige Dokumentation in den Repositorien.</p>
+            </div>
 
-                <div class="dev-grid">
-                    <!-- Build -->
-                    <article class="dev-card">
-                        <h3 class="dev-card__title" data-de="Aus dem Quelltext bauen" data-en="Build from source">Aus dem Quelltext bauen</h3>
-                        <pre class="terminal terminal--small"><code><span class="prompt">$</span> git clone https://github.com/doppelcheck/main doppelcheck
-<span class="prompt">$</span> cd doppelcheck
-<span class="prompt">$</span> npm install
-<span class="prompt">$</span> npm run build           <span class="comment"># → .output/chrome-mv3/</span>
-<span class="prompt">$</span> npm run build:firefox   <span class="comment"># → .output/firefox-mv2/</span></code></pre>
-                        <p class="dev-card__hint"
-                           data-de="Anschließend in chrome://extensions oder about:debugging als entpackte Erweiterung laden."
-                           data-en="Then load as an unpacked extension via chrome://extensions or about:debugging.">Anschließend in <code>chrome://extensions</code> oder <code>about:debugging</code> als entpackte Erweiterung laden.</p>
-                    </article>
+            <div class="devs">
+                <article class="devs__card">
+                    <h3 class="devs__h" data-de="Aus dem Quelltext bauen" data-en="Build from source">Aus dem Quelltext bauen</h3>
+                    <pre class="code"><code><span class="code__c">$</span> git clone https://github.com/doppelcheck/main doppelcheck
+<span class="code__c">$</span> cd doppelcheck
+<span class="code__c">$</span> npm install
+<span class="code__c">$</span> npm run build           <span class="code__d"># → .output/chrome-mv3/</span>
+<span class="code__c">$</span> npm run build:firefox   <span class="code__d"># → .output/firefox-mv2/</span></code></pre>
+                    <p class="devs__hint"
+                       data-de="Anschließend in <code>chrome://extensions</code> oder <code>about:debugging</code> als entpackte Erweiterung laden."
+                       data-en="Then load as an unpacked extension via <code>chrome://extensions</code> or <code>about:debugging</code>.">Anschließend in <code>chrome://extensions</code> oder <code>about:debugging</code> als entpackte Erweiterung laden.</p>
+                </article>
 
-                    <!-- LLM tiers -->
-                    <article class="dev-card">
-                        <h3 class="dev-card__title" data-de="Drei LLM-Stufen" data-en="Three LLM tiers">Drei LLM-Stufen</h3>
-                        <ul class="tier-list">
-                            <li>
-                                <strong data-de="Browser-intern" data-en="Browser-native">Browser-intern</strong>
-                                <span data-de=" — Chromes Gemini Nano via Prompt-API. Standard. Kostenlos, on-device. Chrome 138+."
-                                      data-en=" — Chrome's Gemini Nano via the Prompt API. Default. Free, on-device. Chrome 138+."> — Chromes Gemini Nano via Prompt-API. Standard. Kostenlos, on-device. Chrome 138+.</span>
-                            </li>
-                            <li>
-                                <strong data-de="Cloud-API" data-en="Cloud API">Cloud-API</strong>
-                                <span data-de=" — Anthropic Claude (claude-haiku-4-5 empfohlen), OpenAI oder Google Gemini. Eigener Schlüssel."
-                                      data-en=" — Anthropic Claude (claude-haiku-4-5 recommended), OpenAI, or Google Gemini. Bring your own key."> — Anthropic Claude (claude-haiku-4-5 empfohlen), OpenAI oder Google Gemini. Eigener Schlüssel.</span>
-                            </li>
-                            <li>
-                                <strong data-de="Lokaler Server" data-en="Local server">Lokaler Server</strong>
-                                <span data-de=" — Ollama oder OpenAI-kompatibel. Voll-lokaler Pfad: das Begleit-Repo gemma-server."
-                                      data-en=" — Ollama or OpenAI-compatible. Fully-local path: the gemma-server companion repo."> — Ollama oder OpenAI-kompatibel. Voll-lokaler Pfad: das Begleit-Repo gemma-server.</span>
-                            </li>
-                        </ul>
-                    </article>
+                <article class="devs__card">
+                    <h3 class="devs__h" data-de="Drei LLM-Stufen" data-en="Three LLM tiers">Drei LLM-Stufen</h3>
+                    <dl class="devs__list">
+                        <dt data-de="Browser-intern" data-en="Browser-native">Browser-intern</dt>
+                        <dd data-de="Chromes Gemini Nano via Prompt-API. Standard. Kostenlos, on-device. Chrome 138+."
+                            data-en="Chrome's Gemini Nano via the Prompt API. Default. Free, on-device. Chrome 138+.">Chromes Gemini Nano via Prompt-API. Standard. Kostenlos, on-device. Chrome 138+.</dd>
+                        <dt data-de="Cloud-API" data-en="Cloud API">Cloud-API</dt>
+                        <dd data-de="Anthropic Claude (claude-haiku-4-5 empfohlen), OpenAI oder Google Gemini. Eigener Schlüssel."
+                            data-en="Anthropic Claude (claude-haiku-4-5 recommended), OpenAI, or Google Gemini. Bring your own key.">Anthropic Claude (claude-haiku-4-5 empfohlen), OpenAI oder Google Gemini. Eigener Schlüssel.</dd>
+                        <dt data-de="Lokaler Server" data-en="Local server">Lokaler Server</dt>
+                        <dd data-de="Ollama oder OpenAI-kompatibel. Voll-lokaler Pfad: das Begleit-Repo gemma-server."
+                            data-en="Ollama or OpenAI-compatible. Fully-local path: the gemma-server companion repo.">Ollama oder OpenAI-kompatibel. Voll-lokaler Pfad: das Begleit-Repo gemma-server.</dd>
+                    </dl>
+                </article>
 
-                    <!-- gemma-server -->
-                    <article class="dev-card dev-card--accent">
-                        <h3 class="dev-card__title" data-de="Lokales Modell — gemma-server" data-en="Local model — gemma-server">Lokales Modell — gemma-server</h3>
-                        <p class="dev-card__intro"
-                           data-de="Konfigurationsfreier lokaler Gemma-Server für Doppelcheck. Vom Klonen bis zum Endpoint auf localhost:11434 in einem Befehl."
-                           data-en="Zero-config local Gemma server for Doppelcheck. From clone to an endpoint on localhost:11434 in one command.">Konfigurationsfreier lokaler Gemma-Server für Doppelcheck. Vom Klonen bis zum Endpoint auf <code>localhost:11434</code> in einem Befehl.</p>
-                        <pre class="terminal terminal--small"><code><span class="prompt">$</span> git clone https://github.com/doppelcheck/gemma-server
-<span class="prompt">$</span> cd gemma-server
-<span class="prompt">$</span> ./start.sh           <span class="comment"># or: docker compose up</span></code></pre>
-                        <a class="dev-card__link" href="https://github.com/doppelcheck/gemma-server" target="_blank" rel="noopener">
-                            <span data-de="Vollständige Anleitung" data-en="Full instructions">Vollständige Anleitung</span>
-                            <span aria-hidden="true">↗</span>
-                        </a>
-                    </article>
+                <article class="devs__card devs__card--accent">
+                    <h3 class="devs__h" data-de="Lokales Modell — gemma-server" data-en="Local model — gemma-server">Lokales Modell — gemma-server</h3>
+                    <p class="devs__intro"
+                       data-de="Konfigurationsfreier lokaler Gemma-Server. Vom Klonen bis zum Endpoint auf <code>localhost:11434</code> in einem Befehl."
+                       data-en="Zero-config local Gemma server. From clone to an endpoint on <code>localhost:11434</code> in one command.">Konfigurationsfreier lokaler Gemma-Server. Vom Klonen bis zum Endpoint auf <code>localhost:11434</code> in einem Befehl.</p>
+                    <pre class="code"><code><span class="code__c">$</span> git clone https://github.com/doppelcheck/gemma-server
+<span class="code__c">$</span> cd gemma-server
+<span class="code__c">$</span> ./start.sh           <span class="code__d"># or: docker compose up</span></code></pre>
+                    <a class="devs__link" href="https://github.com/doppelcheck/gemma-server" target="_blank" rel="noopener"
+                       data-de="Vollständige Anleitung →" data-en="Full instructions →">Vollständige Anleitung →</a>
+                </article>
 
-                    <!-- Repos -->
-                    <article class="dev-card">
-                        <h3 class="dev-card__title" data-de="Repositorien" data-en="Repositories">Repositorien</h3>
-                        <ul class="repo-list">
-                            <li>
-                                <a href="https://github.com/doppelcheck/main" target="_blank" rel="noopener">
-                                    <span class="repo-list__path">doppelcheck/main</span>
-                                    <span class="repo-list__desc"
-                                          data-de="Die Erweiterung. WXT · TypeScript · React. Enthält die Python-Variante in legacy/."
-                                          data-en="The extension. WXT · TypeScript · React. Includes the Python variant in legacy/.">Die Erweiterung. WXT · TypeScript · React. Enthält die Python-Variante in <code>legacy/</code>.</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/doppelcheck/gemma-server" target="_blank" rel="noopener">
-                                    <span class="repo-list__path">doppelcheck/gemma-server</span>
-                                    <span class="repo-list__desc"
-                                          data-de="Konfigurationsfreier lokaler Gemma-Server. Bash · Docker · Ollama."
-                                          data-en="Zero-config local Gemma server. Bash · Docker · Ollama.">Konfigurationsfreier lokaler Gemma-Server. Bash · Docker · Ollama.</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/doppelcheck/website" target="_blank" rel="noopener">
-                                    <span class="repo-list__path">doppelcheck/website</span>
-                                    <span class="repo-list__desc"
-                                          data-de="Diese Seite. Statisches HTML/CSS/JS, ohne Build-Schritt."
-                                          data-en="This site. Static HTML/CSS/JS, no build step.">Diese Seite. Statisches HTML/CSS/JS, ohne Build-Schritt.</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </article>
-                </div>
+                <article class="devs__card">
+                    <h3 class="devs__h" data-de="Repositorien" data-en="Repositories">Repositorien</h3>
+                    <ul class="devs__repos">
+                        <li>
+                            <a href="https://github.com/doppelcheck/main" target="_blank" rel="noopener">
+                                <span class="devs__repo-name">doppelcheck/main</span>
+                                <span class="devs__repo-desc"
+                                      data-de="Die Erweiterung. WXT · TypeScript · React. Enthält die Python-Variante in <code>legacy/</code>."
+                                      data-en="The extension. WXT · TypeScript · React. Includes the Python variant in <code>legacy/</code>.">Die Erweiterung. WXT · TypeScript · React. Enthält die Python-Variante in <code>legacy/</code>.</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/doppelcheck/gemma-server" target="_blank" rel="noopener">
+                                <span class="devs__repo-name">doppelcheck/gemma-server</span>
+                                <span class="devs__repo-desc"
+                                      data-de="Konfigurationsfreier lokaler Gemma-Server. Bash · Docker · Ollama."
+                                      data-en="Zero-config local Gemma server. Bash · Docker · Ollama.">Konfigurationsfreier lokaler Gemma-Server. Bash · Docker · Ollama.</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/doppelcheck/website" target="_blank" rel="noopener">
+                                <span class="devs__repo-name">doppelcheck/website</span>
+                                <span class="devs__repo-desc"
+                                      data-de="Diese Seite. Statisches HTML/CSS/JS, kein Build-Schritt."
+                                      data-en="This site. Static HTML/CSS/JS, no build step.">Diese Seite. Statisches HTML/CSS/JS, kein Build-Schritt.</span>
+                            </a>
+                        </li>
+                    </ul>
+                </article>
             </div>
         </section>
 
@@ -394,59 +408,36 @@
 
 
     <!-- =========================================================
-         FOOTER / COLOPHON
+         FOOTER
     ========================================================== -->
-    <footer class="colophon" id="info">
-        <div class="colophon__rule" aria-hidden="true">
-            <span></span><span></span><span></span><span></span>
-        </div>
-
-        <div class="colophon__grid">
-            <section class="colophon__col colophon__col--lede">
-                <h2 data-de="Info" data-en="Info">Info</h2>
-                <p data-de="Doppelcheck ist ein Projekt des KI-Wissenschaftlers und -beraters Mark Wernsdorfer. Möglich gemacht wurde es durch Förderprogramme des WPK-Innovationsfonds sowie des Media Lab Bayern."
-                   data-en="Doppelcheck is a project by AI researcher and consultant Mark Wernsdorfer. Made possible through grants from the WPK Innovation Fund and Media Lab Bayern.">Doppelcheck ist ein Projekt des KI-Wissenschaftlers und -beraters Mark Wernsdorfer. Möglich gemacht wurde es durch Förderprogramme des WPK-Innovationsfonds sowie des Media Lab Bayern.</p>
-            </section>
-
-            <section class="colophon__col">
+    <footer class="foot" id="info">
+        <div class="foot__inner">
+            <div class="foot__col">
+                <h2 data-de="Doppelcheck" data-en="Doppelcheck">Doppelcheck</h2>
+                <p data-de="Eine Browser-Erweiterung von Mark Wernsdorfer. Gefördert vom WPK-Innovationsfonds und Media Lab Bayern."
+                   data-en="A browser extension by Mark Wernsdorfer. Supported by the WPK Innovation Fund and Media Lab Bayern.">Eine Browser-Erweiterung von Mark Wernsdorfer. Gefördert vom WPK-Innovationsfonds und Media Lab Bayern.</p>
+            </div>
+            <div class="foot__col">
                 <h2 data-de="Links" data-en="Links">Links</h2>
                 <ul>
-                    <li><a href="https://markwernsdorfer.com/" target="_blank" rel="noopener">Mark Wernsdorfer</a></li>
+                    <li><a href="https://markwernsdorfer.com/" target="_blank" rel="noopener">markwernsdorfer.com</a></li>
                     <li><a href="https://innovationsfonds.wpk.org/doppelcheck-ki-gestuetzte-lokale-faktenpruefung/" target="_blank" rel="noopener">WPK Innovationsfonds</a></li>
                     <li><a href="https://media-lab.de/de/angebote/media-tech-lab/doppelcheck/" target="_blank" rel="noopener">Media Lab Bayern</a></li>
-                    <li><a href="https://github.com/doppelcheck" target="_blank" rel="noopener">GitHub-Organisation</a></li>
+                    <li><a href="https://github.com/doppelcheck" target="_blank" rel="noopener">github.com/doppelcheck</a></li>
                 </ul>
-            </section>
-
-            <section class="colophon__col">
-                <h2 data-de="Kontakt" data-en="Contact">Kontakt</h2>
-                <a class="colophon__email" href="mailto:info@doppelcheck.com">info@doppelcheck.com</a>
-                <p class="colophon__small" data-de="Lizenz: MIT für den Code · IBM Plex unter SIL OFL 1.1"
-                   data-en="License: MIT for the code · IBM Plex under SIL OFL 1.1">Lizenz: MIT für den Code · IBM Plex unter SIL OFL 1.1</p>
-            </section>
-
-            <section class="colophon__col colophon__col--social">
+            </div>
+            <div class="foot__col">
                 <h2 data-de="Folgen" data-en="Follow">Folgen</h2>
-                <div class="social-icons">
-                    <a href="https://github.com/doppelcheck" target="_blank" rel="noopener" aria-label="GitHub">
-                        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.13v3.16c0 .31.21.68.8.56C20.22 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/wernsdorfer/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                        <img src="assets/images/Icon_akar-linkedin-fill.svg" alt="">
-                    </a>
-                </div>
-                <p class="colophon__social-note"
-                   data-de="GitHub für die Repos, LinkedIn für den Projektleiter."
-                   data-en="GitHub for the repos, LinkedIn for the project lead.">GitHub für die Repos, LinkedIn für den Projektleiter.</p>
-                <p class="colophon__signoff" data-de="— Eine kritische Lese­hilfe."
-                   data-en="— A critical reading aid.">— Eine kritische Lese­hilfe.</p>
-            </section>
+                <ul>
+                    <li><a href="https://github.com/doppelcheck" target="_blank" rel="noopener">GitHub <span class="foot__hint" data-de="(die Repos)" data-en="(the repos)">(die Repos)</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/wernsdorfer/" target="_blank" rel="noopener">LinkedIn <span class="foot__hint" data-de="(Mark Wernsdorfer)" data-en="(Mark Wernsdorfer)">(Mark Wernsdorfer)</span></a></li>
+                    <li><a href="mailto:info@doppelcheck.com">info@doppelcheck.com</a></li>
+                </ul>
+            </div>
         </div>
-
-        <div class="colophon__bottom">
-            <p data-de="© 2026 Doppelcheck — Ein Projekt zur Förderung der digitalen Mündigkeit und kritischen Informationsbewertung."
-               data-en="© 2026 Doppelcheck — A project to promote digital literacy and critical information assessment.">© 2026 Doppelcheck — Ein Projekt zur Förderung der digitalen Mündigkeit und kritischen Informationsbewertung.</p>
-            <p class="colophon__type" data-de="Gesetzt in Fraunces & IBM Plex." data-en="Set in Fraunces & IBM Plex.">Gesetzt in Fraunces &amp; IBM Plex.</p>
+        <div class="foot__bottom">
+            <span data-de="© 2026 Doppelcheck — MIT-lizenziert. Quellen: github.com/doppelcheck."
+                  data-en="© 2026 Doppelcheck — MIT licensed. Sources: github.com/doppelcheck.">© 2026 Doppelcheck — MIT-lizenziert. Quellen: github.com/doppelcheck.</span>
         </div>
     </footer>
 
