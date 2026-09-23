@@ -14,11 +14,13 @@ No frameworks, no build step.
 website/
 ├── index.html              one page, bilingual (DE / EN switch in the header)
 ├── assets/
-│   ├── css/style.css       editorial/broadsheet stylesheet
-│   ├── js/script.js        language toggle + scroll-reveal
+│   ├── css/style.css       the stylesheet — IBM Plex, light/dark via light-dark()
+│   ├── js/script.js        language toggle + theme toggle + scroll-reveal
 │   ├── fonts/              IBM Plex Sans + Mono (SIL OFL 1.1)
 │   ├── images/             logo, social icons
 │   └── videos/             legacy explainer clips (kept for reference)
+├── robots.txt              crawler policy, points at the sitemap
+├── sitemap.xml             one entry — the site is a single page
 ├── LICENSE
 └── README.md
 ```
@@ -28,8 +30,15 @@ website/
 `.lang-switch` button at the top right and persists the choice in
 `localStorage`.
 
-The display face is **Fraunces** (loaded from Google Fonts); body and code use
-the locally bundled IBM Plex Sans / Mono.
+Type is **IBM Plex Mono** (display and accents) and **IBM Plex Sans** (body),
+both bundled locally under `assets/fonts/` — the page loads no remote fonts and
+makes no third-party requests.
+
+The page follows the operating system's light/dark setting by default, via
+`color-scheme: light dark` and `light-dark()` in the CSS. The ☀ · ☾ control in
+the header pins one side explicitly and persists that choice in `localStorage`;
+clicking the already-active side releases the pin and returns to following the
+OS. While nothing is pinned, the marker tracks live OS changes.
 
 ## Run locally
 
