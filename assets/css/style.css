@@ -81,6 +81,26 @@ body {
 a { color: inherit; text-decoration: none; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
 
+/* Skip link: off-screen until focused, then pinned top-left over the topbar.
+   Uses the same tokens as everything else, so it follows both themes without
+   a media query. It is the first focusable element in the document, ahead of
+   the 10 header controls a keyboard user would otherwise tab through. */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 200;
+    padding: .6rem 1rem;
+    background: var(--bg);
+    color: var(--ink);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+}
+.skip-link:focus-visible {
+    left: .75rem;
+    top: .75rem;
+}
+
 img, svg, video { display: block; max-width: 100%; }
 ul, ol { list-style: none; }
 
