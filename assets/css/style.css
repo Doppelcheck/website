@@ -800,6 +800,17 @@ code {
     border: 1px solid light-dark(transparent, #1A2138);
 }
 .code code { background: transparent; padding: 0; color: inherit; font-size: inherit; display: block; }
+/* Long commands must stay READABLE rather than scroll out of sight: a horizontal
+   scrollbar inside a code block is invisible on touch, so a narrow viewport would
+   silently clip the end of a command (the OLLAMA_ORIGINS line lost its trailing
+   `serve` at 390px before this rule). Wrap instead, with a hanging indent so a
+   continuation line reads as part of the command above it, never as a new one. */
+.code code {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    padding-left: 1.6em;
+    text-indent: -1.6em;
+}
 .code__c { color: var(--amber); margin-right: .55em; }
 .code__d { color: rgba(241, 234, 220, .5); }
 
