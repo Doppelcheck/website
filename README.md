@@ -53,18 +53,22 @@ Or just open `index.html` directly in a browser.
 
 ## Where the content comes from
 
-The page describes the current Doppelcheck stack — a browser extension with an
-optional companion local model server. The two source-of-truth repositories
-are:
+The page describes the current Doppelcheck stack — a browser extension that can
+talk to a cloud API, Chrome's on-device model, or any LLM host running on the
+user's own machine. The source-of-truth repository is:
 
 - [`doppelcheck/main`](https://github.com/doppelcheck/main) — the extension
   itself (WXT · React · TypeScript). The previous Python + FastAPI + Ollama +
   bookmarklet implementation is preserved unchanged in `legacy/`.
-- [`doppelcheck/gemma-server`](https://github.com/doppelcheck/gemma-server) —
-  zero-config local Gemma server, the recommended fully-local LLM tier.
 
-If you change architecture in either of those repos, this site is the third
-place that needs an update.
+The fully-local tier needs no Doppelcheck-specific server: the extension speaks
+the Ollama native API and the OpenAI-compatible API, so Ollama, LM Studio,
+`llama-server`, vLLM and the like all work. A companion installer repo
+(`doppelcheck/gemma-server`) filled this role from 2026-05 until 2026-10 and was
+retired once general-purpose hosts covered the same ground.
+
+If you change architecture in that repo, this site is the second place that
+needs an update.
 
 ## Deploy
 

@@ -377,21 +377,21 @@
                         <dd data-de="Anthropic Claude (claude-haiku-4-5 empfohlen), OpenAI oder Google Gemini. Eigener Schlüssel."
                             data-en="Anthropic Claude (claude-haiku-4-5 recommended), OpenAI, or Google Gemini. Bring your own key.">Anthropic Claude (claude-haiku-4-5 empfohlen), OpenAI oder Google Gemini. Eigener Schlüssel.</dd>
                         <dt data-de="Lokaler Server" data-en="Local server">Lokaler Server</dt>
-                        <dd data-de="Ollama oder OpenAI-kompatibel. Voll-lokaler Pfad: das Begleit-Repo gemma-server."
-                            data-en="Ollama or OpenAI-compatible. Fully-local path: the gemma-server companion repo.">Ollama oder OpenAI-kompatibel. Voll-lokaler Pfad: das Begleit-Repo gemma-server.</dd>
+                        <dd data-de="Ollama oder OpenAI-kompatibel. Voll-lokaler Pfad: jedes LLM auf dem eigenen Rechner."
+                            data-en="Ollama or OpenAI-compatible. Fully-local path: any LLM on your own machine.">Ollama oder OpenAI-kompatibel. Voll-lokaler Pfad: jedes LLM auf dem eigenen Rechner.</dd>
                     </dl>
                 </article>
 
                 <article class="devs__card devs__card--accent">
-                    <h3 class="devs__h" data-de="Lokales Modell — gemma-server" data-en="Local model — gemma-server">Lokales Modell — gemma-server</h3>
+                    <h3 class="devs__h" data-de="Lokales Modell — eigener Host" data-en="Local model — your own host">Lokales Modell — eigener Host</h3>
                     <p class="devs__intro"
-                       data-de="Konfigurationsfreier lokaler Gemma-Server. Vom Klonen bis zum Endpoint auf <code>localhost:11434</code> in einem Befehl."
-                       data-en="Zero-config local Gemma server. From clone to an endpoint on <code>localhost:11434</code> in one command.">Konfigurationsfreier lokaler Gemma-Server. Vom Klonen bis zum Endpoint auf <code>localhost:11434</code> in einem Befehl.</p>
-                    <pre class="code"><code><span class="code__c">$</span> git clone https://github.com/doppelcheck/gemma-server
-<span class="code__c">$</span> cd gemma-server
-<span class="code__c">$</span> ./start.sh           <span class="code__d"># or: docker compose up</span></code></pre>
-                    <a class="devs__link" href="https://github.com/doppelcheck/gemma-server" target="_blank" rel="noopener"
-                       data-de="Vollständige Anleitung →" data-en="Full instructions →">Vollständige Anleitung →</a>
+                       data-de="Jeder lokale LLM-Host funktioniert. Mit Ollama sind es drei Befehle — der dritte erlaubt der Erweiterung den Zugriff, denn lokale Server lehnen unbekannte Origins ab."
+                       data-en="Any local LLM host works. With Ollama it is three commands — the third lets the extension in, because local servers reject unknown origins by default.">Jeder lokale LLM-Host funktioniert. Mit Ollama sind es drei Befehle — der dritte erlaubt der Erweiterung den Zugriff, denn lokale Server lehnen unbekannte Origins ab.</p>
+                    <pre class="code"><code><span class="code__c">$</span> curl -fsSL https://ollama.com/install.sh | sh
+<span class="code__c">$</span> ollama pull llama3.2:3b
+<span class="code__c">$</span> OLLAMA_ORIGINS="chrome-extension://*,moz-extension://*" ollama serve</code></pre>
+                    <a class="devs__link" href="https://ollama.com/download" target="_blank" rel="noopener"
+                       data-de="Ollama installieren →" data-en="Install Ollama →">Ollama installieren →</a>
                 </article>
 
                 <article class="devs__card">
@@ -403,14 +403,6 @@
                                 <span class="devs__repo-desc"
                                       data-de="Die Erweiterung. WXT · TypeScript · React. Enthält die Python-Variante in <code>legacy/</code>."
                                       data-en="The extension. WXT · TypeScript · React. Includes the Python variant in <code>legacy/</code>.">Die Erweiterung. WXT · TypeScript · React. Enthält die Python-Variante in <code>legacy/</code>.</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/doppelcheck/gemma-server" target="_blank" rel="noopener">
-                                <span class="devs__repo-name">doppelcheck/gemma-server</span>
-                                <span class="devs__repo-desc"
-                                      data-de="Konfigurationsfreier lokaler Gemma-Server. Bash · Docker · Ollama."
-                                      data-en="Zero-config local Gemma server. Bash · Docker · Ollama.">Konfigurationsfreier lokaler Gemma-Server. Bash · Docker · Ollama.</span>
                             </a>
                         </li>
                         <li>
