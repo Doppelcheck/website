@@ -251,7 +251,7 @@ ul, ol { list-style: none; }
     top: -5%;
     bottom: -5%;
     width: 60%;
-    background-image: url('../images/DC_image_2.jpg');
+    background-image: url('../images/DC_image_2_bg.jpg');
     background-size: cover;
     background-position: center;
     z-index: -1;
