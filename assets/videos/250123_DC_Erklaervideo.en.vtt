@@ -1,0 +1,57 @@
+WEBVTT
+
+1
+00:00:05.120 --> 00:00:10.160
+Dealing with written content online is more complex and more demanding than ever.
+
+2
+00:00:11.760 --> 00:00:16.855
+Disinformation, derivative content and the sheer volume of information make it
+
+3
+00:00:16.855 --> 00:00:18.775
+hard to keep track.
+
+4
+00:00:18.855 --> 00:00:22.775
+Fake news and deliberate manipulation make researching a text far harder.
+
+5
+00:00:24.055 --> 00:00:27.975
+Doppelcheck helps readers with that challenge, in the form of a browser
+
+6
+00:00:27.975 --> 00:00:28.535
+extension.
+
+7
+00:00:28.970 --> 00:00:33.130
+First, the software extracts the central claims of a text.
+
+8
+00:00:33.370 --> 00:00:38.250
+It then checks them against further sources that the reader considers trustworthy.
+
+9
+00:00:45.065 --> 00:00:49.385
+Using a simple colour code, Doppelcheck shows whether there is agreement
+
+10
+00:00:49.385 --> 00:00:53.305
+or contradiction between the text being examined and those further sources.
+
+11
+00:00:53.465 --> 00:00:57.910
+Unlike conventional fact-checkers, Doppelcheck works entirely locally on
+
+12
+00:00:57.910 --> 00:00:59.110
+your own machine.
+
+13
+00:00:59.110 --> 00:01:03.030
+Your data stays safe, and you decide for yourself which sources are
+
+14
+00:01:03.030 --> 00:01:04.150
+trustworthy to you.

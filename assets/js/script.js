@@ -39,6 +39,18 @@
         document.querySelectorAll(".lang-switch__opt").forEach((opt) => {
             opt.classList.toggle("is-active", opt.dataset.lang === lang);
         });
+        // Caption tracks follow the chosen language: the matching one is
+        // offered as the showing track, the other is hidden rather than
+        // competing with it. The video's audio is German either way.
+        document.querySelectorAll("video").forEach((video) => {
+            const tracks = video.textTracks;
+            if (!tracks) return;
+            for (let i = 0; i < tracks.length; i++) {
+                const track = tracks[i];
+                if (track.kind !== "captions" && track.kind !== "subtitles") continue;
+                track.mode = track.language === lang ? "showing" : "disabled";
+            }
+        });
         try { localStorage.setItem(LANG_KEY, lang); } catch (_) { /* private mode */ }
     }
 

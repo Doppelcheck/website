@@ -1,0 +1,57 @@
+WEBVTT
+
+1
+00:00:05.120 --> 00:00:10.160
+Der Umgang mit Textinhalten im Internet ist heute komplexer und herausfordernder denn je.
+
+2
+00:00:11.760 --> 00:00:16.855
+Falschinformationen, Inhalte und die schiere Menge an Informationen machen
+
+3
+00:00:16.855 --> 00:00:18.775
+es schwer, den Überblick zu behalten.
+
+4
+00:00:18.855 --> 00:00:22.775
+Fake News und gezielte Manipulationen erschweren Textrecherchen massiv.
+
+5
+00:00:24.055 --> 00:00:27.975
+Doppelcheck unterstützt in Form einer Browsererweiterung User*innen bei dieser
+
+6
+00:00:27.975 --> 00:00:28.535
+Herausforderung.
+
+7
+00:00:28.970 --> 00:00:33.130
+Zu Beginn extrahiert die Software die zentralen Aussagen eines Textes.
+
+8
+00:00:33.370 --> 00:00:38.250
+Dann gleicht sie diese mit weiteren Quellen ab, die die User*innen als vertrauenswürdig einstufen.
+
+9
+00:00:45.065 --> 00:00:49.385
+Doppelcheck visualisiert mithilfe eines einfachen Farbcodes, ob es Übereinstimmungen
+
+10
+00:00:49.385 --> 00:00:53.305
+oder Widersprüche zwischen dem untersuchten Text und den weiteren Quellen gibt.
+
+11
+00:00:53.465 --> 00:00:57.910
+Anders als herkömmliche Faktenchecker arbeitet Doppelcheck vollständig lokal auf
+
+12
+00:00:57.910 --> 00:00:59.110
+dem eigenen Rechner.
+
+13
+00:00:59.110 --> 00:01:03.030
+Daten bleiben sicher und die User*innen entscheiden selbst, welche Quellen für
+
+14
+00:01:03.030 --> 00:01:04.150
+sie vertrauenswürdig sind.
