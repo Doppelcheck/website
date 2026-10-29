@@ -17,8 +17,8 @@ website/
 │   ├── css/style.css       the stylesheet — IBM Plex, light/dark via light-dark()
 │   ├── js/script.js        language toggle + theme toggle + scroll-reveal
 │   ├── fonts/              IBM Plex Sans + Mono (SIL OFL 1.1)
-│   ├── images/             logo, social icons
-│   └── videos/             legacy explainer clips (kept for reference)
+│   ├── images/             the logo and the hero imagery
+│   └── videos/             the explainer film the page plays, + DE/EN captions
 ├── robots.txt              crawler policy, points at the sitemap
 ├── sitemap.xml             one entry — the site is a single page
 ├── LICENSE
